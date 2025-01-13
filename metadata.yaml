@@ -1,0 +1,7 @@
+id: "t2t-openai-api-lcc"
+name: "OpenAI API T2T by LCC"
+type: "t2t" # (one of stt, t2t, ttsg, or ttsc)
+is_windows_compatible: true
+is_unix_compatible: true
+windows_run_script: "start.bat"
+unix_run_script: "start.sh"
