@@ -29,7 +29,7 @@ class OpenAIModel():
         logging.debug(f"Streaming results")
         full_response = ""
         for chunk in stream:
-            content_chunk = chunk.choices[0].message.content or ""
+            content_chunk = chunk.choices[0].delta.content or ""
             full_response += content_chunk
             yield content_chunk
         logging.debug(f"Finished with full response: {full_response}")
