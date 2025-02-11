@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(dotenv_path='e:\env\jaison-core.env.txt')
 
 '''
 Supported component type entrypoints
@@ -11,9 +11,9 @@ To support streaming, your implementation should be a generator: https://wiki.py
 You may also simply return the final result
 '''
 
-import os
 from .model import OpenAIModel
-t2t_model = OpenAIModel(os.getenv('MODEL'))
+from .config import config
+t2t_model = OpenAIModel(config['model'])
 
 from jaison_grpc.common import STTComponentRequest, T2TComponentRequest, TTSGComponentRequest, TTSCComponentRequest
 async def request_unpacker(request_iterator):
@@ -38,6 +38,7 @@ async def start_t2t(request_iterator):
         user_input += user_input_chunk
     for content_chunk in t2t_model(system_input,user_input):
         yield content_chunk
+        
 # For speech-to-text models
 async def start_stt(request_iterator) -> str:
     async for audio, sample_rate, sample_width, channels in request_unpacker(request_iterator): # receiving chunks of info through a stream

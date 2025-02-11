@@ -24,6 +24,10 @@ Furthermore, create a `.env` file in the root of this project with the following
 OPENAI_API_KEY=<openai api key like sk-...>
 MODEL=<name of model like gpt-4o-mini or ft:gpt-4o-mini-2024...>
 ```
+You can find you OpenAI API token [here](https://platform.openai.com/api-keys) as shown below:
+
+<img src="./assets/openai_1.png" alt="openai api token location 1" height="200"/>
+<img src="./assets/openai_2.png" alt="openai api token location 2" height="200"/>
 
 ## Testing
 Assuming you are in the right virtual environment and are in the root directory:
