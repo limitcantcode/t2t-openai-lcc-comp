@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
-load_dotenv(dotenv_path='e:\env\jaison-core.env.txt')
+from .config import config
+load_dotenv(dotenv_path=config['env'])
 
 '''
 Supported component type entrypoints
@@ -12,7 +13,6 @@ You may also simply return the final result
 '''
 
 from .model import OpenAIModel
-from .config import config
 t2t_model = OpenAIModel(config['model'])
 
 from jaison_grpc.common import STTComponentRequest, T2TComponentRequest, TTSGComponentRequest, TTSCComponentRequest

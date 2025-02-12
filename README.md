@@ -22,7 +22,6 @@ pip install -r requirements.txt
 Furthermore, create a `.env` file in the root of this project with the following:
 ```
 OPENAI_API_KEY=<openai api key like sk-...>
-MODEL=<name of model like gpt-4o-mini or ft:gpt-4o-mini-2024...>
 ```
 You can find you OpenAI API token [here](https://platform.openai.com/api-keys) as shown below:
 
@@ -37,7 +36,7 @@ python ./src/main.py --port=5000
 If it runs, it should be fine.
 
 ## Configuration
-There is no configuration.
+In `config.json`, update `model` with the model you want to use like `gpt-4o-mini` or `ft:gpt-4o-mini-2024...`. Also update `env` with the filepath to your `.env` environment file.
 
 ## Related stuff
 Project J.A.I.son: https://github.com/limitcantcode/jaison-core
