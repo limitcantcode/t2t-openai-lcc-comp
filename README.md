@@ -38,6 +38,8 @@ If it runs, it should be fine.
 ## Configuration
 In `config.json`, update `model` with the model you want to use like `gpt-4o-mini` or `ft:gpt-4o-mini-2024...`. Also update `env` with the filepath to your `.env` environment file.
 
+Adjust `temperature`, `top_p`, `frequency_penalty`, `presence_penalty` to change variety of responses to your liking.
+
 ## Related stuff
 Project J.A.I.son: https://github.com/limitcantcode/jaison-core
 

@@ -9,9 +9,14 @@ from openai import OpenAI
 import logging
 
 class OpenAIModel():
-    def __init__(self, model_name):
+    def __init__(self, model_name, temperature, top_p, frequency_penalty, presence_penalty):
         self.client = OpenAI()
         self.model_name = model_name
+        
+        self.temperature = temperature
+        self.top_p = top_p
+        self.frequency_penalty = frequency_penalty
+        self.presence_penalty = presence_penalty
 
     def __call__(self, sys_prompt, user_prompt):
         messages=[
@@ -23,7 +28,11 @@ class OpenAIModel():
         stream = self.client.chat.completions.create(
             messages=messages,
             model=self.model_name,
-            stream=True
+            stream=True,
+            temperature=self.temperature,
+            top_p=self.top_p,
+            presence_penalty=self.presence_penalty,
+            frequency_penalty=self.frequency_penalty
         )
 
         logging.debug(f"Streaming results")
