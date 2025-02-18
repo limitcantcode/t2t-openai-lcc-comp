@@ -13,7 +13,7 @@ You may also simply return the final result
 '''
 
 from .model import OpenAIModel
-t2t_model = OpenAIModel(config['model'],config['temperature'],config['top_p'],config['frequency_penalty'],config['presence_penalty'])
+t2t_model = OpenAIModel(config['base_url'], config['model'],config['temperature'],config['top_p'],config['frequency_penalty'],config['presence_penalty'])
 
 from jaison_grpc.common import STTComponentRequest, T2TComponentRequest, TTSGComponentRequest, TTSCComponentRequest
 async def request_unpacker(request_iterator):

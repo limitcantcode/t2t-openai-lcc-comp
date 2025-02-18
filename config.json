@@ -1,4 +1,5 @@
 {
+    "base_url": "https://api.openai.com/v1",
     "model": "ft:gpt-4o-mini-2024-07-18:lcc::B0GEEL0o",
     "temperature": 0.7,
     "top_p": 0.9,
