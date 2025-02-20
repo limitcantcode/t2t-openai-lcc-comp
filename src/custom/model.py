@@ -9,8 +9,8 @@ from openai import OpenAI
 import logging
 
 class OpenAIModel():
-    def __init__(self, model_name, temperature, top_p, frequency_penalty, presence_penalty):
-        self.client = OpenAI()
+    def __init__(self, base_url, model_name, temperature, top_p, frequency_penalty, presence_penalty):
+        self.client = OpenAI(base_url=base_url)
         self.model_name = model_name
         
         self.temperature = temperature
