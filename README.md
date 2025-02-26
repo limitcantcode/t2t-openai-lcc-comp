@@ -54,7 +54,8 @@ python ./config-test.py
 To make sure you did set up .env and json.config right
 
 ## Configuration
-In `config.json`, update `model` with the model you want to use like `gpt-4o-mini` or `ft:gpt-4o-mini-2024...`. Also update `env` with the filepath to your `.env` environment file.
+In `config.json`, update `model` with the model you want to use like `gpt-4o-mini` or `ft:gpt-4o-mini-2024...`. 
+Also update `env` with the filepath to your `.env` environment file and use absolute path in to avoid possible problems.  
 
 If you use OpenAI's services, set `base_url` to `https://api.openai.com/v1`. For other providers, check their respective documentation.
 
